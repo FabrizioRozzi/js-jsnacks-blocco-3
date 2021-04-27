@@ -248,24 +248,44 @@
   ///////////////////////////////////////////////
 
   // DICHIARO LE VARIABILI DA PASSARE ALLA FUNZIONE
-  var stringUtente = prompt("Inserisci una stringa");
+  // var stringUtente = prompt("Inserisci una stringa");
 
-  var numMax = stringUtente.length;
-  //console.log(numMax);
-  var numMin =parseInt(Math.random() * (numMax - 1) + 1) ;
-  console.log("La lettere iniziale é la numero :" + numMin);
-  console.log(calcolaStringa(numMax, numMin, stringUtente));
+  // var numMax = stringUtente.length;
+  // //console.log(numMax);
+  // var numMin =parseInt(Math.random() * (numMax - 1) + 1) ;
+  // console.log("La lettere iniziale é la numero :" + numMin);
+  // console.log(calcolaStringa(numMax, numMin, stringUtente));
 
 
 
-  //////////FUNCTION///////////
-  function calcolaStringa(max, min, string){
-    var result = "";
-    while(min < max){
-      result += string[min] ;
-      min ++;
-    }
-    string = result;
-    return string
+  // //////////FUNCTION///////////
+  // function calcolaStringa(max, min, string){
+  //   var result = "";
+  //   while(min < max){
+  //     result += string[min] ;
+  //     min ++;
+  //   }
+  //   string = result;
+  //   return string
+  // }
+
+
+  ///////////////////////////////////////////////
+  //////////////  SNACK 5  //////////////////////
+  ///////////////////////////////////////////////
+
+
+var stringUno = prompt("Inserisci la prima stringa...");
+var stringDue = prompt("Inserisci la seconda stringa...");
+console.log("La prima stringa é " + "-" + stringUno + "-" + "lunga: " + stringUno.length);
+console.log("La seconda stringa é " + "-" + stringDue + "-" + "lunga: " + stringDue.length);
+while(stringUno.length!=stringDue.length){
+  if(stringUno<stringDue){
+    stringUno += "-";
+    console.log("Adesso la tua prima stringa e lunga: " + stringUno.length);
+  }else if(stringUno>stringDue){
+    stringDue += "-";
+    console.log("Adesso la tua seconda stringa e lunga: " + stringDue.length);
   }
-
+}
+console.log("Adesso sono lunghe : " +stringUno.length+ " " +stringDue.length)
