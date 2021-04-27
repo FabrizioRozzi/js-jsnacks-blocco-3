@@ -202,37 +202,70 @@
   //////////////  SNACK 4  //////////////////////
   ///////////////////////////////////////////////
 
-var squadra = [];
-for(var i = 0; i < 5; i++){
-  playerGenerator(squadra)
-}
+// var squadra = [];
+// // FACCIO UN CICLO PER FAR GENERARE LA FORMAZIONE CASUALE
+// for(var i = 0; i < 5; i++){
+//   playerGenerator(squadra)
+// }
 
-console.log(squadra);
+// console.log(squadra);
 
 
 
 
-////// FUNCTION //////
-function playerGenerator(arrSquadra){
-  var points = Math. floor(Math. random() * 101);
-  var three = Math. floor(Math. random() * 101);
-  var randomString = '';
-  var chars = "0123456789";
-  for (var i=0; i<3; i++) {
-    var rnum = Math.floor(Math.random() * chars.length);
-    randomString += chars.substring(rnum,rnum+1);
+// ////// FUNCTION //////
+// function playerGenerator(arrSquadra){
+//   // GENERO CASUALMENTE LA MEDIA PUNTI E I SUCCESSI DA 3 PUNTI
+//   var points = Math. floor(Math. random() * 101);
+//   var three = Math. floor(Math. random() * 101);
+//   // MI DICHIARO UNA STRINGA CHE CONTERRA' IL CODICE CASUALE
+//   var randomString = '';
+//   // FACCIO DUE CICLI PER DI ESTRAZIONE DEL CODICE GIOCATORE
+//   var chars = "0123456789";
+//   for (var i=0; i<3; i++) {
+//     var rnum = Math.floor(Math.random() * chars.length);
+//     randomString += chars.substring(rnum,rnum+1);
+//   }
+//   chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//   for (var i=0; i<3; i++) {
+//     var rnum = Math.floor(Math.random() * chars.length);
+//     randomString += chars.substring(rnum,rnum+1);
+//   }
+//   //console.log(randomString);
+//   // PUSHO DENTRO L' ARRAY UN OGGETTO GIOCATORE
+//    arrSquadra.push({
+//      playerCode: randomString,                             //  INSERIRE UN OGGETTO DA UTENTE NELL'ARRAY
+//      averagePoints: points ,          
+//      threePoints :three
+//    });
+//    //console.log(arrSquadra);
+// }
+
+
+
+  ///////////////////////////////////////////////
+  //////////////  SNACK 5  //////////////////////
+  ///////////////////////////////////////////////
+
+  // DICHIARO LE VARIABILI DA PASSARE ALLA FUNZIONE
+  var stringUtente = prompt("Inserisci una stringa");
+
+  var numMax = stringUtente.length;
+  //console.log(numMax);
+  var numMin =parseInt(Math.random() * (numMax - 1) + 1) ;
+  console.log("La lettere iniziale é la numero :" + numMin);
+  console.log(calcolaStringa(numMax, numMin, stringUtente));
+
+
+
+  //////////FUNCTION///////////
+  function calcolaStringa(max, min, string){
+    var result = "";
+    while(min < max){
+      result += string[min] ;
+      min ++;
+    }
+    string = result;
+    return string
   }
-  chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  for (var i=0; i<3; i++) {
-    var rnum = Math.floor(Math.random() * chars.length);
-    randomString += chars.substring(rnum,rnum+1);
-  }
-  //console.log(randomString);
 
-   arrSquadra.push({
-     playerCode: randomString,                             //  INSERIRE UN OGGETTO DA UTENTE NELL'ARRAY
-     averagePoints: points ,          
-     threePoints :three
-   });
-   //console.log(arrSquadra);
-}
