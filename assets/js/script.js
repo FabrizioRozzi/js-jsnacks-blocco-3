@@ -271,21 +271,117 @@
 
 
   ///////////////////////////////////////////////
-  //////////////  SNACK 5  //////////////////////
+  //////////////  SNACK 6  //////////////////////
   ///////////////////////////////////////////////
 
 
-var stringUno = prompt("Inserisci la prima stringa...");
-var stringDue = prompt("Inserisci la seconda stringa...");
-console.log("La prima stringa é " + "-" + stringUno + "-" + "lunga: " + stringUno.length);
-console.log("La seconda stringa é " + "-" + stringDue + "-" + "lunga: " + stringDue.length);
-while(stringUno.length!=stringDue.length){
-  if(stringUno<stringDue){
-    stringUno += "-";
-    console.log("Adesso la tua prima stringa e lunga: " + stringUno.length);
-  }else if(stringUno>stringDue){
-    stringDue += "-";
-    console.log("Adesso la tua seconda stringa e lunga: " + stringDue.length);
-  }
-}
-console.log("Adesso sono lunghe : " +stringUno.length+ " " +stringDue.length)
+// var stringUno = prompt("Inserisci la prima stringa...");
+// var stringDue = prompt("Inserisci la seconda stringa...");
+// console.log("La prima stringa é " + "-" + stringUno + "-" + "lunga: " + stringUno.length);
+// console.log("La seconda stringa é " + "-" + stringDue + "-" + "lunga: " + stringDue.length);
+// while(stringUno.length!=stringDue.length){
+//   if(stringUno<stringDue){
+//     stringUno += "-";
+//     console.log("Adesso la tua prima stringa e lunga: " + stringUno.length);
+//   }else if(stringUno>stringDue){
+//     stringDue += "-";
+//     console.log("Adesso la tua seconda stringa e lunga: " + stringDue.length);
+//   }
+// }
+// console.log("Adesso sono lunghe : " +stringUno.length+ " " +stringDue.length)
+
+
+
+  ///////////////////////////////////////////////
+  //////////////  SNACK 7  //////////////////////
+  ///////////////////////////////////////////////
+
+
+// const automobili = [
+//   {
+//     marca : "BMW",
+//     modello : "settemila",
+//     alimentazione : "benzina"
+//   },
+//   {
+//     marca : "FIAT",
+//     modello : "settemila",
+//     alimentazione : "gas"
+//   },
+//   {
+//     marca : "ALFA ",
+//     modello : "settemila",
+//     alimentazione : "diesel"
+//   },
+//   {
+//     marca : "AUDI",
+//     modello : "settemila",
+//     alimentazione : "elettrica"
+//   },
+//   {
+//     marca : "porche",
+//     modello : "settemila",
+//     alimentazione : "elettrica"
+//   },
+//   {
+//     marca : "BMW",
+//     modello : "settemila",
+//     alimentazione : "benzina"
+//   },
+//   {
+//     marca : "BMW",
+//     modello : "settemila",
+//     alimentazione : "benzina"
+//   },
+//   {
+//     marca : "BMW",
+//     modello : "settemila",
+//     alimentazione : "benzina"
+//   },
+//   {
+//     marca : "BMW",
+//     modello : "settemila",
+//     alimentazione : "benzina"
+//   },
+//   {
+//     marca : "BMW",
+//     modello : "settemila",
+//     alimentazione : "metano"
+//   }
+// ];
+
+// const arrBenzina = automobili.filter((auto) => {
+//   return auto.alimentazione === 'benzina';
+// })
+// const arrDiesel = automobili.filter((auto) => {
+//   return auto.alimentazione === 'diesel';
+// })
+// const arrRestanti = automobili.filter((auto) => {
+//   if(auto.alimentazione != 'benzina' && auto.alimentazione !='diesel'){
+//     return auto;
+//   }
+// })
+
+
+// console.log(arrBenzina, arrDiesel, arrRestanti);
+  
+
+  ///////////////////////////////////////////////
+  //////////////  SNACK 8  //////////////////////
+  ///////////////////////////////////////////////
+  //A partire da un array di stringhe, crea un secondo array formattando 
+  //le stringhe del primo array in minuscolo e con l’iniziale maiuscola.
+
+const arrMisto = [
+  'ciao',
+  'Mondo',
+  'BELLISSIMO'
+]  ;
+
+const arrOrd = arrMisto.map((string) => {
+  let string2 = string.slice(1);
+  string2= string2.toLowerCase();
+  string = string[0].toUpperCase()+string2;
+  return string;
+})
+console.log(arrMisto, arrOrd) ;
