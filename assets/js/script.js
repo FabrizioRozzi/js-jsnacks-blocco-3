@@ -372,16 +372,64 @@
   //A partire da un array di stringhe, crea un secondo array formattando 
   //le stringhe del primo array in minuscolo e con l’iniziale maiuscola.
 
-const arrMisto = [
-  'ciao',
-  'Mondo',
-  'BELLISSIMO'
-]  ;
+// const arrMisto = [
+//   'ciao',
+//   'Mondo',
+//   'BELLISSIMO'
+// ]  ;
 
-const arrOrd = arrMisto.map((string) => {
-  let string2 = string.slice(1);
-  string2= string2.toLowerCase();
-  string = string[0].toUpperCase()+string2;
-  return string;
-})
-console.log(arrMisto, arrOrd) ;
+// const arrOrd = arrMisto.map((string) => {
+//   let string2 = string.slice(1);
+//   string2= string2.toLowerCase();
+//   string = string[0].toUpperCase()+string2;
+//   return string;
+// })
+// console.log(arrMisto, arrOrd) ;
+
+
+
+  ///////////////////////////////////////////////
+  //////////////  SNACK 9  //////////////////////
+  ///////////////////////////////////////////////
+//Crea un array di oggetti che rappresentano degli animali: ogni animale ha un 
+//nome, una famiglia e una classe.Crea un nuovo array con la lista dei mammiferi.
+
+// const arrAnimals = [
+//   {
+//     nome:'leone',
+//     famiglia:'felidi',
+//     classe:'mammiferi'
+//   },
+//   {
+//     nome:'trigre',
+//     famiglia:'felidi',
+//     classe:'mammiferi'
+//   },
+//   {
+//     nome:'rondine',
+//     famiglia:'irundinidi',
+//     classe:'uccelli'
+//   },
+//   {
+//     nome:'spigola',
+//     famiglia:'spigole',
+//     classe:'pesci'
+//   },
+//   {
+//     nome:'gatto',
+//     famiglia:'felidi',
+//     classe:'mammiferi'
+//   },
+//   {
+//     nome:'cane',
+//     famiglia:'canidi',
+//     classe:'mammiferi'
+//   },
+// ];
+
+// const arrMammiferi = arrAnimals.filter((animals)=>{
+//   if(animals.classe === 'mammiferi'){
+//     return animals;
+//   }
+// })
+// console.log(arrMammiferi);
